@@ -1374,6 +1374,7 @@ do_shell(
 #endif
     int		keep_termcap = !termcap_active;
 
+    apply_autocmds(EVENT_SHELLCMDPRE, NULL, NULL, FALSE, curbuf);
     /*
      * Disallow shell commands for "rvim".
      * Disallow shell commands from .exrc and .vimrc in current directory for
